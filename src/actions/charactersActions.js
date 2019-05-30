@@ -1,4 +1,4 @@
-import { getCharacters } from '../service/avatarApi';
+import { getCharacters } from '../services/avatarApi';
 
 export const FETCH_CHARACTERS_LOADING = 'FETCH_CHARACTERS_LOADING';
 export const FETCH_CHARACTERS = 'FETCH_CHARACTERS';
