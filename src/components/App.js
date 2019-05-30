@@ -1,17 +1,18 @@
 import React from 'react';
-import { BrowserRouter, Router, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import AllCharacters from '../containers/AllCharacters';
+import CharacterById from '../containers/CharacterById';
 
 export default function App() {
   return (
     <>
       <Router>
-
-
+        <Switch>
+          <Route exact path="/avatars" component={AllCharacters} />
+          <Route path="/avatar-detail/:id" component={CharacterById} />
+        </Switch>
       </Router>
-      <h1>Hook me up</h1>,
-      <AllCharacters />
     </>
   );
 }
