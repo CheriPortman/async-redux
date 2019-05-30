@@ -48,7 +48,7 @@ export default createStore(
 ***
 reducers/index.js
 ```js
-import { comvineReducers } from 'redux';
+import { combineReducers } from 'redux';
 
 ```
 *** reducers/quotesReducer.js
