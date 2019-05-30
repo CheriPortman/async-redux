@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Character({ character }) {
   return (
     <section>
-      <Link to={`/character/${character.id}`}>
+      <Link to={`/avatar/${character.id}`}>
         <p>{character.name}</p>
         <img src={character.img} />
       </Link>
