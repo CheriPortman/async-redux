@@ -6,8 +6,6 @@ import {
   FETCH_CHARACTERS_ERROR
 } from './charactersActions.js';
 
-// import getCharacters from '../services/avatarApi';
-
 jest.mock('../services/avatarApi.js');
 
 describe('characters actions', () => {

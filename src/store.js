@@ -4,7 +4,6 @@ import {
   compose
 } from 'redux';
 import reducer from './reducers';
-// import thunk from 'redux-thunk';
 import { promiseMiddleware } from 'promise-middleware-redux';
 
 export default createStore(
