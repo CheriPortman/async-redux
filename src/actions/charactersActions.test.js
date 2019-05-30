@@ -1,28 +1,24 @@
 import {
   fetchCharacters,
+  FETCH_CHARACTERS,
   FETCH_CHARACTERS_LOADING,
-  FETCH_CHARACTERS
+  FETCH_CHARACTERS_FULFILLED,
+  FETCH_CHARACTERS_ERROR
 } from './charactersActions.js';
 
-jest.mock('../services/avatarApi.js', () => ({
-  getCharacters: () => Promise.resolve([])
-}));
+// import getCharacters from '../services/avatarApi';
+
+jest.mock('../services/avatarApi.js');
 
 describe('characters actions', () => {
   it('dispatches locating action and a fetch characters action', () => {
-    const thunk = fetchCharacters();
-    const dispatch = jest.fn();
 
-    return thunk(dispatch)
-      .then(() => {
-        expect(dispatch).toHaveBeenCalledWith({
-          type: FETCH_CHARACTERS_LOADING
-        });
-
-        expect(dispatch).toHaveBeenCalledWith({
-          type: FETCH_CHARACTERS,
-          payload: []
-        });
-      });
+    expect(fetchCharacters()).toEqual({
+      type: FETCH_CHARACTERS,
+      pendingType: FETCH_CHARACTERS_LOADING,
+      fulfilledType: FETCH_CHARACTERS_FULFILLED,
+      rejectedType: FETCH_CHARACTERS_ERROR,
+      payload: expect.any(Promise)
+    });
   });
 });

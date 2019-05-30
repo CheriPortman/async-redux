@@ -6,7 +6,7 @@ export const [
   fetchCharacters,
   FETCH_CHARACTERS, 
   FETCH_CHARACTERS_LOADING, //pending
-  _, //fulfilled
+  FETCH_CHARACTERS_FULFILLED, //fulfilled
   FETCH_CHARACTERS_ERROR //rejected
 ] = createAction('FETCH_CHARACTERS', getCharacters);
 
