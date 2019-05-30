@@ -6,7 +6,7 @@ import { getCharacters, getCharactersLoading, getCharactersError } from '../sele
 
 import Characters from '../components/characters/Characters';
 
-import { fetchCharacters } from '../containers/AllCharacters';
+import { fetchCharacters } from '../actions/charactersActions';
 
 class AllCharacters extends PureComponent {
   static propTypes = {
