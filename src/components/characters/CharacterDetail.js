@@ -11,10 +11,10 @@ function CharacterDetail({ character }) {
 
   return (
     <section>
-      <h2>{name}</h2>
-      <p>{affiliation}</p>
+      <h2>Character Name: {name}</h2>
+      <p>Affiliation: {affiliation}</p>
       <img src={image} />
-      <p>{position}</p>
+      <p>Position: {position}</p>
     </section>
   );
 }

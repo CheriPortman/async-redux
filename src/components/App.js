@@ -9,8 +9,8 @@ export default function App() {
     <>
       <Router>
         <Switch>
-          <Route exact path="/avatars" component={AllCharacters} />
-          <Route path="/avatar-detail/:id" component={CharacterById} />
+          <Route exact path="/" component={AllCharacters} />
+          <Route path="/avatar/:id" component={CharacterById} />
         </Switch>
       </Router>
     </>
