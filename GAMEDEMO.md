@@ -59,7 +59,7 @@ const initialState = {
   loading: false,
   error: null
 };
-export default function reucer(state - [], action) {
+export default function reducer(state - [], action) {
   return state;
 }
 ```
